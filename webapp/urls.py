@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
-from webapp.views import add_product,  product_view, add_category
+from webapp.views import add_product, product_view, add_category
+
 urlpatterns = [
     path('', views.index, name='products'),
     path('categories/add/', add_category, name='add_category'),

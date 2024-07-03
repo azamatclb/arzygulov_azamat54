@@ -6,17 +6,17 @@ from webapp.models import Product, Category
 
 
 def index(request):
-    products = Product.objects.order_by("price")
+    products = Product.objects.order_by("date_added")
     return render(request, 'index.html', context={"products": products})
 
 
 def product_view(request, pk, *args, **kwargs):
     try:
-        products = Product.objects.get(id=pk)
+        product = Product.objects.get(id=pk)
         pass
     except Product.DoesNotExist:
         return HttpResponseRedirect('/')
-    return render(request, 'product_detail.html', context={'products': products})
+    return render(request, 'product_detail.html', context={'product': product})
 
 
 def add_category(request):
