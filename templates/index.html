@@ -3,94 +3,28 @@
     <title>Product Cards</title>
 {% endblock %}
 
-{% block style %}
-
-    {#    <style>#}
-    {#        body{#}
-    {#            margin: 5px 15px;#}
-    {#        }#}
-    {#        .product-container {#}
-    {#            display: flex;#}
-    {#            flex-wrap: nowrap;#}
-    {#            margin: 5px 25px 55px 25px;#}
-    {#        }#}
-    {#        .product-card {#}
-    {#            border: 2px solid black;#}
-    {#            padding: 10px;#}
-    {#            width: 300px;#}
-    {#            font-family: Arial, sans-serif;#}
-    {#            margin-right: 10px;#}
-    {#            display: flex;#}
-    {#        }#}
-    {#        .product-info {#}
-    {#            margin-left: 10px;#}
-    {#        }#}
-    {#        .product-title {#}
-    {#            font-weight: bold;#}
-    {#        }#}
-    {#        .product-category {#}
-    {#            color: gray;#}
-    {#        }#}
-    {#        .product-price {#}
-    {#            font-weight: bold;#}
-    {#            font-size: 1.2em;#}
-    {#        }#}
-    {#        .see-more {#}
-    {#            color: blue;#}
-    {#            text-decoration: none;#}
-    {#        }#}
-    {#        .see-more:hover {#}
-    {#            text-decoration: underline;#}
-    {#        }#}
-    {#        .product-img{#}
-    {#            width: 100px;#}
-    {#            height: 100px;#}
-    {#        }#}
-    {#        .container{#}
-    {#            margin: 25px;#}
-    {#        }#}
-    {#    </style>#}
-{% endblock %}
-
 {% block context %}
 
-    {#<div class="container">#}
-    {#    <div class="product-container">#}
-    {#        {% for product in products %}#}
-    {#        <div class="product-card">#}
-    {#            <div class="product-image-card">#}
-    {#                <img src="{{ product.image }}" alt="product-image" class="product-img">#}
-    {#            </div>#}
-    {#            <div class="product-info">#}
-    {#                <div class="product-title">{{ product.title }}</div>#}
-    {#                <div class="product-category">{{ product.category }}</div>#}
-    {#                <div class="product-price">Price: {{ product.price }}$</div>#}
-    {#                <a href="product/{{ product.id }}" class="see-more">see more >>></a>#}
-    {#                <a href="{% url 'product_view' product.pk %}"></a>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#        {% endfor %}#}
-    {#    </div>#}
-    {#</div>#}
-
-
-
-    <div class="container mt-4">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            {% for product in products %}
-                <div class="col">
-                    <div class="card h-100" style="max-width: 350px; margin: auto;">
+    
+    <div class="container mt-4 mb-5">
+    <div class="row">
+        {% for product in products %}
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card w-100" style="max-width: 350px; margin: auto;">
+                    <div class="ratio ratio-4x3">
                         <img src="{{ product.image }}" class="card-img-top" alt="product-image"
-                             style="height: 300px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ product.title }}</h5>
-                            <p class="card-text text-muted">{{ product.category }}</p>
-                            <p class="card-text"><strong>Price: {{ product.price }}$</strong></p>
-                            <a href="{% url 'product_view' product.pk %}" class="btn btn-primary">See more</a>
-                        </div>
+                             style="object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.title }}</h5>
+                        <p class="card-text text-muted">{{ product.category }}</p>
+                        <p class="card-text"><strong>Price: {{ product.price }}$</strong></p>
+                        <a href="{% url 'product_view' product.pk %}" class="btn btn-success">See more</a>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
+</div>
+
 {% endblock %}
