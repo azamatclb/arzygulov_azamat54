@@ -17,9 +17,9 @@
 
 
 {% block context %}
-    
+
     <div class="container">
-        <div class="row justify-content-center mt-5 mb-5">
+        <div class="row justify-content-center mt-3 mb-5">
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-body">
@@ -50,10 +50,15 @@
                                     {% endfor %}
                                 </select>
                             </div>
-                            <div class="mb-3">
+                            <div class=" mb-3">
                                 <label for="image" class="form-label">Image URL</label>
                                 <input type="text" id="image" name="image" class="form-control"
                                        placeholder="Enter image URL" required>
+                            </div>
+                            <div class=" mb-3">
+                                <label for="in_stock" class="form-label">Stock</label>
+                                <input type="text" id="in_stock" name="in_stock" class="form-control"
+                                       placeholder="Enter quantity left" required>
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success btn-block">Add Product</button>
@@ -64,11 +69,4 @@
             </div>
         </div>
     </div>
-
-
-
-    {#    <div class="input-group mb-3">#}
-    {#        <input type="text" class="form-control" placeholder="Username" aria-label="Username"#}
-    {#               aria-describedby="basic-addon1">#}
-    {#    </div>#}
 {% endblock %}

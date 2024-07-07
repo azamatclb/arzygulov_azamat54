@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 
 from webapp.models import Product, Category
@@ -38,6 +38,7 @@ def add_product(request):
         category_id = request.POST.get("category")
         price = request.POST.get("price")
         image = request.POST.get("image")
+        in_stock = request.POST.get('in_stock')
 
         category = Category.objects.get(id=category_id)
 
@@ -46,7 +47,8 @@ def add_product(request):
             description=description,
             category=category,
             price=price,
-            image=image
+            image=image,
+            in_stock=in_stock
         )
 
         return HttpResponseRedirect(reverse('products'))

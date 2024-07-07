@@ -1,82 +1,54 @@
 [
   {
-    "model": "webapp.category",
-    "pk": 1,
-    "fields": {
-      "title": "Обувь",
-      "description": "Нет Описания"
-    }
-  },
-  {
-    "model": "webapp.category",
-    "pk": 3,
-    "fields": {
-      "title": "jackets",
-      "description": ""
-    }
-  },
-  {
-    "model": "webapp.category",
-    "pk": 7,
-    "fields": {
-      "title": "shoes",
-      "description": ""
-    }
-  },
-  {
-    "model": "webapp.category",
-    "pk": 8,
-    "fields": {
-      "title": "hat",
-      "description": ""
-    }
-  },
-  {
     "model": "webapp.product",
-    "pk": 1,
+    "pk": 9,
     "fields": {
-      "title": "Nike sb dunk",
-      "description": "Size: 42",
-      "category": 1,
-      "date_added": "2024-06-30",
-      "price": "5400.00",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a3e7dead-1ad2-4c40-996d-93ebc9df0fca/dunk-low-retro-mens-shoes-5FQWGR.png"
-    }
-  },
-  {
-    "model": "webapp.product",
-    "pk": 3,
-    "fields": {
-      "title": "Adidas",
+      "title": "Porsche 911 Carrera",
       "description": "",
-      "category": 3,
-      "date_added": "2024-07-01",
-      "price": "5000.00",
-      "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/5ce0cd039c0e4536a9a0bbfb390dbe43_9366/tiro-24-competition-all-weather-jacket.jpg"
+      "category": 11,
+      "date_added": "2024-07-08",
+      "price": "200000.00",
+      "image": "https://files.porsche.com/filestore/image/multimedia/none/992-2nd-c2-modelimage-sideshot/thumbwhite/3944d683-19bf-11ef-812b-005056bbdc38;sK;twebp/porsche-thumbwhite.webp",
+      "in_stock": 10
     }
   },
   {
     "model": "webapp.product",
-    "pk": 4,
+    "pk": 10,
     "fields": {
-      "title": "nike jackets",
+      "title": "Porsche 718 Cayman",
       "description": "",
-      "category": 3,
-      "date_added": "2024-07-01",
-      "price": "5555.00",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d2fd42a9-9759-4e52-88d5-26ffd0dc3040/acg-trail-snacks-mens-storm-fit-adv-jacket-dfsNDZ.png"
+      "category": 11,
+      "date_added": "2024-07-08",
+      "price": "100900.00",
+      "image": "https://files.porsche.com/filestore/image/multimedia/none/982-718-c7-modelimage-sideshot/thumbwhite/230138a1-e874-11ea-80cd-005056bbdc38;sK;twebp/porsche-thumbwhite.webp",
+      "in_stock": 5
     }
   },
   {
     "model": "webapp.product",
-    "pk": 5,
+    "pk": 11,
     "fields": {
-      "title": "nike cap",
+      "title": "Porsche Macan",
       "description": "",
-      "category": 8,
-      "date_added": "2024-07-01",
-      "price": "1500.00",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1df7ea32-d43f-4666-aef0-911b73fb8c8e/sportswear-heritage86-womens-cap-vg1VNf.png"
+      "category": 11,
+      "date_added": "2024-07-08",
+      "price": "95300.00",
+      "image": "https://files.porsche.com/filestore/image/multimedia/none/macan-bev-4-modelimage/thumbwhite/17c06ed6-aacb-11ee-8112-005056bbdc38;sK;twebp/porsche-thumbwhite.webp",
+      "in_stock": 3
+    }
+  },
+  {
+    "model": "webapp.product",
+    "pk": 12,
+    "fields": {
+      "title": "Porsche Cayenne",
+      "description": "",
+      "category": 11,
+      "date_added": "2024-07-08",
+      "price": "150000.00",
+      "image": "https://files.porsche.com/filestore/image/multimedia/none/e3-2nd-cayenne-modelimage-sideshot/thumbwhite/183a2390-8859-11ee-810c-005056bbdc38;sK;twebp/porsche-thumbwhite.webp",
+      "in_stock": 6
     }
   }
 ]

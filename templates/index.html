@@ -5,26 +5,26 @@
 
 {% block context %}
 
-    
+
     <div class="container mt-4 mb-5">
-    <div class="row">
-        {% for product in products %}
-            <div class="col-12 col-md-6 col-lg-3 mb-4">
-                <div class="card w-100" style="max-width: 350px; margin: auto;">
-                    <div class="ratio ratio-4x3">
-                        <img src="{{ product.image }}" class="card-img-top" alt="product-image"
-                             style="object-fit: cover;">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ product.title }}</h5>
-                        <p class="card-text text-muted">{{ product.category }}</p>
-                        <p class="card-text"><strong>Price: {{ product.price }}$</strong></p>
-                        <a href="{% url 'product_view' product.pk %}" class="btn btn-success">See more</a>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card w-100" style="max-width: 350px; margin: auto;">
+                        <div class="ratio ratio-4x3">
+                            <img src="{{ product.image }}" class="card-img-top" alt="product-image"
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.title }}</h5>
+                            <p class="card-text text-muted">{{ product.category }}</p>
+                            <p class="card-text"><strong>Price: {{ product.price }}$</strong></p>
+                            <a href="{% url 'product_view' product.pk %}" class="btn btn-success">See more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div>
 
 {% endblock %}
