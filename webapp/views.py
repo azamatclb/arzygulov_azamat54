@@ -7,7 +7,7 @@ from webapp.validation import validation
 
 
 def index(request):
-    products = Product.objects.filter(in_stock=1)
+    products = Product.objects.filter(in_stock__gte=1)
     return render(request, 'index.html', context={"products": products})
 
 
