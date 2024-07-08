@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Add Product</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input value="{{ product.title }}" id="title" name="title" class="form-control"
+                                   placeholder="Enter title">
+                            {% if errors.title %}
+                                <p class="text-danger">{{ errors.title }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea id="description" name="description" class="form-control" rows="4"
+                                      placeholder="Enter description">{{ product.description }}</textarea>
+                            {% if errors.description %}
+                                <p class="text-danger">{{ errors.description }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price</label>
+                            <input value="{{ product.price }}" id="price" name="price" class="form-control"
+                                   placeholder="Enter price">
+                            {% if errors.price %}
+                                <p class="text-danger">{{ errors.price }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Category</label>
+                            <select id="category" name="category" class="form-select">
+                                <option value="" selected disabled>Select category</option>
+                                {% if not errors.category %}
+                                    {% for category in categories %}
+                                        <option value="{{ category.id }}"
+                                                {% if category.id == product.category.id %}selected{% endif %}>{{ category.title }}</option>
+                                    {% endfor %}
+                                {% else %}
+                                    <p class="text-danger">{{ errors.category }}</p>
+                                {% endif %}
+                            </select>
+                            {% if errors.category %}
+                                <p class="text-danger">{{ errors.category }}</p>
+                            {% endif %}
+                        </div>
+                        <div class=" mb-3">
+                            <label for="image" class="form-label">Image URL</label>
+                            <input value="{{ product.image }}" type="text" id="image" name="image" class="form-control"
+                                   placeholder="Enter image URL">
+                            {% if errors.image %}
+                                <p class="text-danger">{{ errors.image }}</p>
+                            {% endif %}
+                        </div>
+                        <div class=" mb-3">
+                            <label for="in_stock" class="form-label">Stock</label>
+                            <input value="{{ product.in_stock }}" type="text" id="in_stock" name="in_stock"
+                                   class="form-control" placeholder="Enter quantity left">
+                            {% if errors.in_stock %}
+                                <p class="text-danger">{{ errors.in_stock }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success mb-1">{{ button_text }}</button>
+                            <a class="btn btn-primary" href="{% url 'products' %}">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

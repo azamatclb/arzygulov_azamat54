@@ -5,7 +5,7 @@
 {% endblock %}
 
 
-{% block context %}
+{% block content %}
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-4">
@@ -22,6 +22,7 @@
                         <p class="card-text"><strong>Description:</strong> {{ product.description }}</p>
                         <p class="card-text"><strong>Date Added:</strong> <small
                                 class="text-muted">{{ product.date_added|date:'Y-m-d' }}</small></p>
+                        <a class="btn btn-primary" href="{% url 'products' %}">Back to products</a>
 
                     </div>
                 </div>
