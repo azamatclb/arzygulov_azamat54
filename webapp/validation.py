@@ -19,7 +19,7 @@ def validation(product):
             float(product.price)
         except ValueError:
             errors['price'] = 'Price must be a number'
-        if len(str(product.price)) > 10:
+        if len(str(product.price)) > 7:
             errors['price'] = 'Price length cannot be longer than 10 characters'
 
     if not product.image:

@@ -27,19 +27,6 @@
   },
   {
     "model": "webapp.product",
-    "pk": 11,
-    "fields": {
-      "title": "Porsche Macan",
-      "description": "",
-      "category": 11,
-      "date_added": "2024-07-08",
-      "price": "95300.00",
-      "image": "https://files.porsche.com/filestore/image/multimedia/none/macan-bev-4-modelimage/thumbwhite/17c06ed6-aacb-11ee-8112-005056bbdc38;sK;twebp/porsche-thumbwhite.webp",
-      "in_stock": 3
-    }
-  },
-  {
-    "model": "webapp.product",
     "pk": 12,
     "fields": {
       "title": "Porsche Cayenne",
@@ -49,6 +36,32 @@
       "price": "150000.00",
       "image": "https://files.porsche.com/filestore/image/multimedia/none/e3-2nd-cayenne-modelimage-sideshot/thumbwhite/183a2390-8859-11ee-810c-005056bbdc38;sK;twebp/porsche-thumbwhite.webp",
       "in_stock": 6
+    }
+  },
+  {
+    "model": "webapp.product",
+    "pk": 14,
+    "fields": {
+      "title": "BMW ",
+      "description": "",
+      "category": 11,
+      "date_added": "2024-07-08",
+      "price": "100000.00",
+      "image": "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/performance/milestones/ms-03-media-hd.jpg?imwidth=1280",
+      "in_stock": 1
+    }
+  },
+  {
+    "model": "webapp.product",
+    "pk": 15,
+    "fields": {
+      "title": "BMW",
+      "description": "",
+      "category": 11,
+      "date_added": "2024-07-08",
+      "price": "99000.00",
+      "image": "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/cannes24/cannes24-00-teaser-hd1.jpg?imwidth=1280",
+      "in_stock": 0
     }
   }
 ]
